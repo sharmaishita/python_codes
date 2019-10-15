@@ -1,0 +1,21 @@
+
+no=0
+pair=0
+n=int(input())
+
+socks=list(map(int,input().split()))
+
+for i in range(n):
+    k=i
+    i=socks[i]
+    if i!=0:
+        for j in range(k+1,n):
+            next_element=j
+            j=socks[j]
+            if i == j and i!=0 and j!=0:
+                socks[k]=0
+                i=0
+                socks[next_element]=0
+                j=0
+                pair=pair+1
+print(pair)
