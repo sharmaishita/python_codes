@@ -1,10 +1,7 @@
 
-no=0
-pair=0
+no,pair=0,0
 n=int(input())
-
 socks=list(map(int,input().split()))
-
 for i in range(n):
     k=i
     i=socks[i]
