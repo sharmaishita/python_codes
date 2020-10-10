@@ -1,0 +1,18 @@
+for u in range(int(input())):
+    k = int(input())
+    x=1
+    lst  = list()
+    lst.append("O")
+    for i in range(2,65):
+        if x < k:
+            lst.append(".")
+            x+=1
+        else:
+            lst.append("X")
+    ans = list()
+    while lst != []:
+        ans.append(lst[:8])
+        lst = lst[8:]
+    for i in range(len(ans)):
+        listToStr = ''.join([str(elem) for elem in ans[i]])
+        print(listToStr)
